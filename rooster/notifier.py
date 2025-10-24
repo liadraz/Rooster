@@ -26,8 +26,7 @@ async def send_jobs_to_telegram_async(jobs: list[JobResult]):
     for job in jobs:
         buckets.setdefault(job.bucket, []).append(job)
 
-    # Send overallsudo dpkg --add-architecture i386
- header
+    # Send overall header
     await bot.send_message(
         chat_id=chat_id,
         text=f"Rooster Update — {len(jobs)} new jobs found.",
